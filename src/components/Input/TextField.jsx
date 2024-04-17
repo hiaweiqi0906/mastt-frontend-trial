@@ -1,7 +1,10 @@
 import React from 'react'
+import TextField from '@mui/material/TextField';
 
-export default function TextField({label}) {
+import "./Input.css"
+
+export default function MasttTextField({label, className}) {
   return (
-    <div>{label} TextField</div>
+    <TextField label={label} className={'input-textfield ' + className}/>
   )
 }

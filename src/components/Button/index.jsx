@@ -1,7 +1,9 @@
 import React from 'react'
 
-export default function Button({type, label}) {
+import './Button.css'
+
+export default function MasttButton({type, label, className}) {
   return (
-    <div>Button</div>
+    <button className={'btn-primary ' + className}>{label}</button>
   )
 }

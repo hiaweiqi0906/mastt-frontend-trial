@@ -40,3 +40,33 @@
 .read-the-docs {
   color: #888;
 } */
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+* {
+  font-family: 'Lato';
+}
+
+.mg-between-input{
+  margin-top: 1.5rem !important;
+}
+
+.mg-above-btn{
+  margin-top: 3rem;
+}
+
+.font-24{
+  font-size: 24px;
+}
+
+.font-20{
+  font-size: 20px;
+}
+
+.font-16{
+  font-size: 20px;
+}
+
+.font-bold{
+  font-weight: bold;
+}

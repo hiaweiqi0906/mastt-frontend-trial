@@ -1,0 +1,10 @@
+.input-textfield{
+  width: 100%;
+  font-family: 'Lato' !important;
+  border-radius: 10px !important;
+}
+
+.input-textfield .MuiInputLabel-outlined{
+color: #666666;
+font-family: 'Lato' !important;
+}

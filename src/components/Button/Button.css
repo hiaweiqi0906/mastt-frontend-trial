@@ -1,0 +1,11 @@
+.btn-primary{
+  width: 100%;
+  background-color: #c60000;
+  border-radius: 10px;
+  height: 3.5rem;
+  color: white;
+  display: block;
+  margin: auto;
+  filter: drop-shadow(0 4px 2px #00000035);
+  border: none;
+}

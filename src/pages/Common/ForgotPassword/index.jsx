@@ -1,4 +1,7 @@
 import React from 'react'
+import Card from 'components/Card'
+import Button from 'components/Button'
+import TextField from 'components/Input/TextField'
 
 export default function ForgotPassword() {
   return (
@@ -6,7 +9,7 @@ export default function ForgotPassword() {
       <Card>
         <img src="" alt="" width={16} height={16} />
 
-        <div>{userType} Forgot Password</div>
+        <div>Forgot Password</div>
         <p>Please enter the email address of your account to reset your password.</p>
         <TextField label="email" />
         <p>Account not found</p>
