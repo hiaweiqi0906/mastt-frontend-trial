@@ -1,0 +1,13 @@
+.navbar{
+  background-color: #c60000 !important;
+  height: 65px;
+  align-items: center;
+}
+
+.navbar a{
+  color: #fff;
+}
+
+.navbar a:hover, .navbar a:active, .navbar a:focus{
+  color: #eaeaea !important;
+}

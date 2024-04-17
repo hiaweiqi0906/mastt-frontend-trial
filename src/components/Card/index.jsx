@@ -1,9 +1,14 @@
 import React from 'react'
+import Container from 'react-bootstrap/Container';
 
-export default function Card({children}) {
+import './Card.css'
+
+export default function Card({ cardSize, children }) {
   return (
-    <div>Card
-      {children}
+    <div className={`card ${cardSize}`}>
+      <Container>
+        {children}
+      </Container>
     </div>
   )
 }
