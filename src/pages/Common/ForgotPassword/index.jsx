@@ -11,7 +11,7 @@ export default function ForgotPassword() {
     <>
       {page === 1 && (
         <div className="d-flex justify-content-center align-items-center" style={{ height: '70vh' }}>
-          <Card cardSize="card-md">
+          <Card className="card-sm">
             <div style={{ textAlign: 'left', marginBottom: '10px' }}>
               <button
                 onClick={() => { }}
@@ -31,7 +31,7 @@ export default function ForgotPassword() {
       )}
       {page === 2 && (
         <div className="d-flex justify-content-center align-items-center" style={{ height: '70vh' }}>
-          <Card cardSize="card-md">
+          <Card className="card-sm">
             <div style={{ textAlign: 'left', marginBottom: '10px' }}>
               <button
                 onClick={() => { setPage(1) }}
@@ -50,7 +50,7 @@ export default function ForgotPassword() {
       )}
       {page === 3 && (
         <div className="d-flex justify-content-center align-items-center" style={{ height: '70vh' }}>
-          <Card cardSize="card-md">
+          <Card className="card-sm">
             <div style={{ textAlign: 'left', marginBottom: '10px' }}>
               <button
                 onClick={() => { setPage(1) }}
