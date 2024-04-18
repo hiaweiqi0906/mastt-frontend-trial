@@ -64,9 +64,17 @@
 }
 
 .font-16{
-  font-size: 20px;
+  font-size: 16px;
+}
+
+.font-14{
+  font-size: 14px;
 }
 
 .font-bold{
   font-weight: bold;
+}
+
+.font-italic{
+  font-style: italic;
 }
