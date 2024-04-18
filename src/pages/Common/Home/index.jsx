@@ -2,12 +2,19 @@ import React, { useState } from 'react'
 import Card from 'components/Card'
 import { Row, Col, Container, Stack } from 'react-bootstrap'
 import Avatar from 'assets/Avatar.png'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 
 import './Home.css'
 
 export default function Home({ userType }) {
+  const navigate = useNavigate();
+
   const [currentActive, setCurrentActive] = useState('match');
+
+  const handleClickMatch = () => {
+    navigate('/match-details')
+  }
+
   return (
     <Container style={{ marginTop: '2rem', marginBottom: '2rem' }}>
       <Row>
@@ -74,60 +81,56 @@ export default function Home({ userType }) {
           <Row>
             <Col xs={2} style={{ borderRight: '1px solid grey' }}>
               <div>
-                <p className='font-bold font-16' style={{marginLeft: '2rem'}}>April 2024</p>
+                <p className='font-bold font-16' style={{ marginLeft: '2rem' }}>April 2024</p>
               </div>
             </Col>
             <Col style={{ marginLeft: '1rem', marginBottom: "1.5rem" }}>
-              <div>
-                <div>
-                  <Stack direction='horizontal' gap={0}>
-                    <p className='font-bold'>Table Tennis Ranking Match - APRIL 2024</p>
-                    <div className='ms-auto' style={{ textAlign: 'right' }}>
-                      <p >1 April 2024 - 30 April 2024</p>
-                    </div>
-                  </Stack>
-                  <p className='truncate-2-lines font-14'>Join us for the highly anticipated Table Tennis Ranking Match, a pivotal event designed to determine the rankings of table tennis players within our league. This event serves as a cornerstone for both amateur and professional table tennis players seeking to establish or improve their positions in the regional and national standings.</p>
+              <div style={{cursor: "pointer"}} onClick={handleClickMatch}>
+                <Stack direction='horizontal' gap={0}>
+                  <p className='font-bold'>Table Tennis Ranking Match - APRIL 2024</p>
+                  <div className='ms-auto' style={{ textAlign: 'right' }}>
+                    <p >1 April 2024 - 30 April 2024</p>
+                  </div>
+                </Stack>
+                <p className='truncate-2-lines font-14'>Join us for the highly anticipated Table Tennis Ranking Match, a pivotal event designed to determine the rankings of table tennis players within our league. This event serves as a cornerstone for both amateur and professional table tennis players seeking to establish or improve their positions in the regional and national standings.</p>
 
-                  <Stack direction='horizontal' gap={0}>
-                    <p className='font-italic'>Competition Venue: <span className='font-bold'>Table Tennis Clubs in Penang States</span></p>
-                    <div className='ms-auto' style={{ textAlign: 'right' }}>
-                      <Link style={{ color: "black" }}><p>Sign Up Now {">"}</p></Link>
-                    </div>
-                  </Stack>
-                </div>
+                <Stack direction='horizontal' gap={0}>
+                  <p className='font-italic'>Competition Venue: <span className='font-bold'>Table Tennis Clubs in Penang States</span></p>
+                  <div className='ms-auto' style={{ textAlign: 'right' }}>
+                    <Link style={{ color: "black" }}><p>Sign Up Now {">"}</p></Link>
+                  </div>
+                </Stack>
               </div>
             </Col>
           </Row>
           <Row style={{ color: '#a4a4a4 !important' }}>
             <Col xs={2} style={{ borderRight: '1px solid grey' }}>
-              <div>
-                <p className='font-16' style={{marginLeft: '2rem'}}>May 2024</p>
+              <div style={{cursor: "pointer"}}>
+                <p className='font-16' style={{ marginLeft: '2rem' }}>May 2024</p>
               </div>
             </Col>
             <Col style={{ marginLeft: '1rem' }}>
-              <div>
-                <div>
-                  <Stack direction='horizontal' gap={0}>
-                    <p className='font-bold'>Table Tennis Ranking Match - APRIL 2024</p>
-                    <div className='ms-auto' style={{ textAlign: 'right' }}>
-                      <p >1 May 2024 - 31 May 2024</p>
-                    </div>
-                  </Stack>
-                  <p className='truncate-2-lines font-14'>Join us for the highly anticipated Table Tennis Ranking Match, a pivotal event designed to determine the rankings of table tennis players within our league. This event serves as a cornerstone for both amateur and professional table tennis players seeking to establish or improve their positions in the regional and national standings.</p>
+              <div style={{cursor: "pointer"}} onClick={handleClickMatch}>
+                <Stack direction='horizontal' gap={0}>
+                  <p className='font-bold'>Table Tennis Ranking Match - APRIL 2024</p>
+                  <div className='ms-auto' style={{ textAlign: 'right' }}>
+                    <p >1 May 2024 - 31 May 2024</p>
+                  </div>
+                </Stack>
+                <p className='truncate-2-lines font-14'>Join us for the highly anticipated Table Tennis Ranking Match, a pivotal event designed to determine the rankings of table tennis players within our league. This event serves as a cornerstone for both amateur and professional table tennis players seeking to establish or improve their positions in the regional and national standings.</p>
 
-                  <Stack direction='horizontal' gap={0}>
-                    <p className='font-italic'>Competition Venue: <span className='font-bold'>Table Tennis Clubs in Penang States</span></p>
-                    <div className='ms-auto' style={{ textAlign: 'right' }}>
+                <Stack direction='horizontal' gap={0}>
+                  <p className='font-italic'>Competition Venue: <span className='font-bold'>Table Tennis Clubs in Penang States</span></p>
+                  <div className='ms-auto' style={{ textAlign: 'right' }}>
                     <Link style={{ color: "black" }}><p>Sign Up Now {">"}</p></Link>
-                    </div>
-                  </Stack>
-                </div>
+                  </div>
+                </Stack>
               </div>
             </Col>
           </Row>
         </Card>}
         {currentActive === "feed" && <div>
-          <Card style={{padding: '1.5rem', marginBottom: "0.5rem"}}>
+          <Card style={{ padding: '1.5rem', marginBottom: "0.5rem" }}>
             <Stack direction='horizontal' gap={3}>
               <img src={Avatar} alt="" width={40} height={40} />
               <div>
@@ -138,7 +141,7 @@ export default function Home({ userType }) {
             </Stack>
             <p className='font-14' style={{ lineHeight: '1.25rem', marginTop: '1rem', marginBottom: '0' }}>We are thrilled to announce the upcoming 2024 Spring Table Tennis Tournament! This exciting event will bring together players from various clubs to compete, showcase their skills, and share their passion for the game.</p>
           </Card>
-          <Card style={{padding: '1.5rem', marginBottom: "0.5rem"}}>
+          <Card style={{ padding: '1.5rem', marginBottom: "0.5rem" }}>
             <Stack direction='horizontal' gap={3}>
               <img src={Avatar} alt="" width={40} height={40} />
               <div>
@@ -149,7 +152,7 @@ export default function Home({ userType }) {
             </Stack>
             <p className='font-14' style={{ lineHeight: '1.25rem', marginTop: '1rem', marginBottom: '0' }}>We are thrilled to announce the upcoming 2024 Spring Table Tennis Tournament! This exciting event will bring together players from various clubs to compete, showcase their skills, and share their passion for the game.</p>
           </Card>
-          <Card style={{padding: '1.5rem', marginBottom: "0.5rem"}}>
+          <Card style={{ padding: '1.5rem', marginBottom: "0.5rem" }}>
             <Stack direction='horizontal' gap={3}>
               <img src={Avatar} alt="" width={40} height={40} />
               <div>
