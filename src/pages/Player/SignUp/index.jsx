@@ -24,7 +24,7 @@ export default function SignUp() {
   return (
     <>
       <div className='d-flex justify-content-center align-items-center' style={{ height: '90vh' }}>
-        <Card cardSize="card-md">
+        <Card className="card-sm">
           <div style={{ textAlign: 'center', marginBottom: '40px' }} className='font-bold font-24'>Register</div>
           <div style={{ display: 'flex', gap: '10px' }}>
             <TextField label="First Name" />
