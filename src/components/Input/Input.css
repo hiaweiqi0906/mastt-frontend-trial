@@ -4,7 +4,7 @@
   border-radius: 10px !important;
 }
 
-.input-textfield .MuiInputLabel-outlined{
-color: #666666;
+.input-textfield .MuiInputLabel-outlined, .input-select{
+color: #666666 !important;
 font-family: 'Lato' !important;
 }
