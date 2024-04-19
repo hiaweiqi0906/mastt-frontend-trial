@@ -9,3 +9,15 @@
   filter: drop-shadow(0 4px 2px #00000035);
   border: none;
 }
+
+.btn-secondary{
+  width: 100%;
+  background-color: #fff;
+  border-radius: 10px;
+  height: 3.5rem;
+  color: #c60000;
+  display: block;
+  margin: auto;
+  filter: drop-shadow(0 4px 2px #00000035);
+  border: none;
+}

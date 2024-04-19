@@ -1,11 +1,17 @@
-import React from 'react'
+import React, {useState} from 'react'
 import Card from 'components/Card'
 import Button from 'components/Button'
 import { Row, Col, Container, Stack } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 import Avatar from 'assets/Avatar.png'
+import SignUpModal from './SignUpModal'
 
 export default function MatchDetails() {
+  const [showSignUpModal, setShowSignUpModal] = useState(false);
+
+  const handleCloseSignUpModal = () => setShowSignUpModal(false);
+  const handleShowSignUpModal = () => setShowSignUpModal(true);
+
   return (
     <Container style={{ marginTop: '2rem', marginBottom: '5rem' }}>
       <div style={{ marginTop: "2rem" }}>
@@ -17,24 +23,12 @@ export default function MatchDetails() {
               <p >1 May 2024 - 31 May 2024</p>
             </div>
           </Stack>
-          <p className='font-14' style={{ height: '20vh' }}>
+          <p className='font-14'>
             Join us for the highly anticipated Table Tennis Ranking Match, a pivotal event designed to determine the rankings of table tennis players within our league. This event serves as a cornerstone for both amateur and professional table tennis players seeking to establish or improve their positions in the regional and national standings.
-
-            Table Tennis Ranking Match:
-
-            Join us for the highly anticipated Table Tennis Ranking Match, a pivotal event designed to determine the rankings of table tennis players within our league. This event serves as a cornerstone for both amateur and professional table tennis players seeking to establish or improve their positions in the regional and national standings.
-
-            Key Features of the Ranking Match:
 
             Competitive Structure: Players will compete in a series of matches organized into divisions based on their current skill level and ranking. Each match will contribute to the overall standings, providing a transparent and progressive pathway for ranking improvements.
 
             Open to All: Whether you are an up-and-coming player or a seasoned professional, this event is open to anyone who is a member of the club. New players will have the opportunity to earn their initial ranking, while veteran players can defend or improve their current positions.
-
-            Regulation Play: Matches will be conducted according to official rules and standards of the sport, ensuring fair play and competitiveness. Official table tennis equipment will be used, and matches will be overseen by qualified referees.
-
-            Ranking Updates: Post-event, all results will be calculated and the updated rankings will be published on our official website and displayed in the club. These rankings will determine seeding for future tournaments and eligibility for exclusive championships.
-
-            Networking and Growth: Apart from the competitive aspect, the Ranking Match provides a perfect platform for players to network, share strategies, and learn from each other’s playing styles. It’s also a great opportunity for players to gauge their progress and set new personal goals.
           </p>
         </Card>
       </div>
@@ -176,7 +170,8 @@ export default function MatchDetails() {
 
       <div style={{ position: 'fixed', bottom: '0', left: 0, right: 0, paddingBottom: "1rem", backgroundImage: "linear-gradient(to bottom, rgba(255,255,255,0.5), rgba(255,255,255,1))" }} >
 
-        <Button className="mg-above-btn" style={{ width: '30%' }} label={"Sign Up"} />
+        <Button className="mg-above-btn" style={{ width: '30%' }} label={"Sign Up"} onClick={handleShowSignUpModal}/>
+        <SignUpModal show={showSignUpModal} handleClose={handleCloseSignUpModal} />
       </div>
     </Container>
   )

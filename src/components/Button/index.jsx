@@ -2,10 +2,10 @@ import React from 'react'
 
 import './Button.css'
 
-export default function MasttButton({ type, label, className, onClick, style }) {
+export default function MasttButton({ type, label, className, onClick, style, variant }) {
   return (
     <button
-      className={'btn-primary ' + className}
+      className={variant==="secondary" ? 'btn-secondary ' + className : 'btn-primary ' + className}
       onClick={onClick}
       style={style}>
       {label}
