@@ -64,7 +64,11 @@
 }
 
 .font-16{
-  font-size: 20px;
+  font-size: 16px;
+}
+
+.font-12 {
+  font-size: 12px;
 }
 
 .font-bold{
