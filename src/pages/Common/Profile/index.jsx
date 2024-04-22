@@ -19,9 +19,9 @@ export default function Profile({ userType }) {
     <Container style={{ marginTop: "3rem" }}>
       {userType === "player" && (
         <>
-          <Card cardSize="card-xxl card-height">
+          <Card className="card-xxl card-height" style={{marginBottom: "24px"}}>
             <Stack direction="horizontal" gap={3}>
-              <img src={testImg} alt="" width={120} height={120} />
+              <img src={testImg} alt="" width={100} height={100} />
               <div style={{ marginLeft: "2rem" }}>
                 <Stack direction="horizontal" gap={2}>
                   <p
@@ -49,35 +49,95 @@ export default function Profile({ userType }) {
               </div>
             </Stack>
           </Card>
-          <Row style={{ width: "100%" }}>
+          <Row>
             <Col xs={4}>
-              <Card>
+              <Card style={{ height: "100%" }}>
                 <p>Points</p>
-                <Stack direction="horizontal" gap={2}>
-                  <p className="font-24 font-bold">2048</p>
-                  <p className="font-16">Ranked #1 in Penang</p>
+                <Stack
+                  direction="horizontal"
+                  gap={2}
+                  style={{ justifyContent: "center" }}
+                >
+                  <p className="font-32 font-bold">2048</p>
+                  <p className="font-12" style={{ marginBottom: "5px" }}>
+                    Ranked #1 in Penang
+                  </p>
                 </Stack>
                 <p>Badges</p>
-                <img src="" alt="" width={64} height={64} />
-                <p>Badge Name</p>
-                <img src="" alt="" width={64} height={64} />
-                <p>Badge Name</p>
-                <img src="" alt="" width={64} height={64} />
-                <p>Badge Name</p>
+                <Row style={{ textAlign: "center" }}>
+                  <Col>
+                    <img src="" alt="" width={40} height={40} />
+                    <p>Badge 1</p>
+                  </Col>
+                  <Col>
+                    <img src="" alt="" width={40} height={40} />
+                    <p>Badge 2</p>
+                  </Col>
+                  <Col>
+                    <img src="" alt="" width={40} height={40} />
+                    <p>Badge 3</p>
+                  </Col>
+                </Row>
+                <Row style={{ textAlign: "center" }}>
+                  <Col>
+                    <img src="" alt="" width={40} height={40} />
+                    <p>Badge 1</p>
+                  </Col>
+                  <Col>
+                    <img src="" alt="" width={40} height={40} />
+                    <p>Badge 2</p>
+                  </Col>
+                  <Col>
+                    <img src="" alt="" width={40} height={40} />
+                    <p>Badge 3</p>
+                  </Col>
+                </Row>
               </Card>
             </Col>
             <Col xs={8}>
-              <Card>
-                <p>Match History</p>
-                <p>All</p>
-                <div>
-                  <img src="" alt="" width={64} height={64} />
-                  <p>vs</p>
-                  <img src="" alt="" width={64} height={64} />
-                  <p>Against ABC</p>
-                  <img src={ViewIcon} alt="" width={16} height={16} />
-                  <p>Match Scores</p>
-                  <p>Match Date Time</p>
+              <Card style={{height: "100%"}}>
+                <Stack direction="horizontal" gap={2}>
+                  <p>Match History</p>
+                  <p className="ms-auto">All</p>
+                </Stack>
+                <div style={{marginBottom: "24px"}}>
+                  <Stack direction="horizontal" gap={4}>
+                    <img src={testImg} alt="" width={56} height={56} />
+                    <span className="font-20 font-bold">11</span>
+                    <span className="font-16">vs</span>
+                    <span className="font-20 font-bold">7</span>
+                    <img src={testImg} alt="" width={56} height={56} />
+                    <div className="ms-auto">
+                      <img src={ViewIcon} alt="" width={16} height={16} style={{display: "block", marginLeft: "auto"}}/>
+                      <p>Match Date Time</p>
+                    </div>
+                  </Stack>
+                </div>
+                <div style={{marginBottom: "24px"}}>
+                  <Stack direction="horizontal" gap={4}>
+                    <img src={testImg} alt="" width={56} height={56} />
+                    <span className="font-20 font-bold">11</span>
+                    <span className="font-16">vs</span>
+                    <span className="font-20 font-bold">7</span>
+                    <img src={testImg} alt="" width={56} height={56} />
+                    <div className="ms-auto">
+                      <img src={ViewIcon} alt="" width={16} height={16} style={{display: "block", marginLeft: "auto"}}/>
+                      <p>Match Date Time</p>
+                    </div>
+                  </Stack>
+                </div>
+                <div style={{marginBottom: "24px"}}>
+                  <Stack direction="horizontal" gap={4}>
+                    <img src={testImg} alt="" width={56} height={56} />
+                    <span className="font-20 font-bold">11</span>
+                    <span className="font-16">vs</span>
+                    <span className="font-20 font-bold">7</span>
+                    <img src={testImg} alt="" width={56} height={56} />
+                    <div className="ms-auto">
+                      <img src={ViewIcon} alt="" width={16} height={16} style={{display: "block", marginLeft: "auto"}}/>
+                      <p>Match Date Time</p>
+                    </div>
+                  </Stack>
                 </div>
               </Card>
             </Col>

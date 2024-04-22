@@ -8,7 +8,7 @@ export default function Login({ userType }) {
   return (
     <>
       <div className='d-flex justify-content-center align-items-center' style={{height: '70vh'}}>
-        <Card cardSize="card-md">
+        <Card className="card-sm">
           <div style={{ textAlign: 'center', marginBottom: '40px' }} className='font-bold font-24'>Login</div>
           <TextField label="Email" />
           <TextField className={'mg-between-input'} label="Password" />
