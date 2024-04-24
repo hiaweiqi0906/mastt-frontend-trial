@@ -19,6 +19,8 @@ import Clubs from 'pages/Common/Clubs';
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
+import Ranking from 'pages/Common/Ranking';
+import AllMatches from 'pages/Common/AllMatches';
 
 const masttTheme = createTheme({
   palette: {
@@ -57,6 +59,8 @@ function App() {
               <Route path="/forgot-password" element={<ForgotPassword />} />
               <Route path="/match-history" element={<MatchHistory />} />
               <Route path="/match-details" element={<MatchDetails />} />
+              <Route path="/all-matches" element={<AllMatches />} />
+              <Route path="/ranking" element={<Ranking />} />
 
               <Route path="/" element={<Home userType="player" />} /> {/* Redirect to home by default */}
             </Routes>
