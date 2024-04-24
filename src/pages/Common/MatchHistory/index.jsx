@@ -1,6 +1,6 @@
 import React from 'react'
 import Card from 'components/Card'
-import { Row, Col, Stack } from 'react-bootstrap'
+import { Row, Col, Stack, Container } from 'react-bootstrap'
 import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
 import TableCell from '@mui/material/TableCell';
@@ -25,7 +25,7 @@ const rows = [
 
 export default function MatchHistory() {
   return (
-    <>
+    <Container style={{marginTop: '3rem'}}>
       <Row>
         <Col xs={4}>
           <Card>
@@ -76,11 +76,10 @@ export default function MatchHistory() {
         <Col>
           <Card>
             <p>Details</p>
-            <TableContainer component={Paper}>
               <Table sx={{ minWidth: 650 }} aria-label="simple table">
                 <TableHead>
                   <TableRow>
-                    <TableCell>Section</TableCell>
+                    <TableCell align="center">Section</TableCell>
                     <TableCell align="center">Result</TableCell>
                   </TableRow>
                 </TableHead>
@@ -90,11 +89,11 @@ export default function MatchHistory() {
                       key={row.section}
                       sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
                     >
-                      <TableCell component="th" scope="row" sx={{ border: 'none' }}>
+                      <TableCell align="center" component="th" scope="row" sx={{ border: 'none' }}>
                         {row.section}
                       </TableCell>
-                      <TableCell align="center" sx={{ border: 'none', width: '60%' }}>
-                        <Stack direction='horizontal' gap={3} style={{}}>
+                      <TableCell align="center" sx={{ border: 'none', width: '80%' }}>
+                        <Stack direction='horizontal' gap={3} style={{justifyContent: 'center'}}>
                           <img src={Avatar} alt="" width={56} height={56} />
                           <span className='font-20 font-bold'>12</span>
                           <span className='font-16'>vs</span>
@@ -106,32 +105,12 @@ export default function MatchHistory() {
                   ))}
                 </TableBody>
               </Table>
-            </TableContainer>
-            <p>Section</p>
-            <p>Result</p>
-
-            <p>1</p>
-            <img src="" alt="" width={32} height={32} />
-            <p>Match Section Score</p>
-            <img src="" alt="" width={32} height={32} />
-
-            <p>2</p>
-            <img src="" alt="" width={32} height={32} />
-            <p>Match Section Score</p>
-            <img src="" alt="" width={32} height={32} />
-
-            <p>3</p>
-            <img src="" alt="" width={32} height={32} />
-            <p>Match Section Score</p>
-            <img src="" alt="" width={32} height={32} />
-
-            <p>Show More</p>
 
           </Card>
         </Col>
       </Row>
 
 
-    </>
+    </Container>
   )
 }
