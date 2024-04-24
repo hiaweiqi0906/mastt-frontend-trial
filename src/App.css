@@ -52,39 +52,39 @@
 }
 
 .mg-above-btn{
-  margin-top: 3rem;
+  margin-top: 3rem !important;
 }
 
 .font-32{
-  font-size: 32px;
+  font-size: 32px !important;
 }
 
 .font-24{
-  font-size: 24px;
+  font-size: 24px !important;
 }
 
 .font-20{
-  font-size: 20px;
+  font-size: 20px !important;
 }
 
 .font-16{
-  font-size: 16px;
+  font-size: 16px !important;
 }
 
 .font-14{
-  font-size: 14px;
+  font-size: 14px !important;
 }
 
 .font-12{
-  font-size: 12px;
+  font-size: 12px !important;
 }
 
 .font-bold{
-  font-weight: bold;
+  font-weight: bold !important;
 }
 
 .font-italic{
-  font-style: italic;
+  font-style: italic !important;
 }
 
 .size-sm{
