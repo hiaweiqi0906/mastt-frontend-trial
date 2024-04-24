@@ -14,6 +14,7 @@ import Profile from 'pages/Common/Profile';
 import ForgotPassword from 'pages/Common/ForgotPassword';
 import Login from 'pages/Common/Login';
 import SignUp from 'pages/Player/SignUp';
+import Clubs from 'pages/Common/Clubs';
 
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
@@ -49,6 +50,9 @@ function App() {
               <Route path="/club/" element={<Home userType="club" />} />
               <Route path="/club/login" element={<Login userType="club" />} />
               <Route path="/club/profile" element={<Profile userType="club" />} />
+              <Route path="/clubs" element={<Clubs />} />
+             
+
 
               <Route path="/forgot-password" element={<ForgotPassword />} />
               <Route path="/match-history" element={<MatchHistory />} />
