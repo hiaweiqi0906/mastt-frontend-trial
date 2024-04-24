@@ -2,15 +2,20 @@ import React, {useState} from 'react'
 import Card from 'components/Card'
 import Button from 'components/Button'
 import { Row, Col, Container, Stack } from 'react-bootstrap'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import Avatar from 'assets/Avatar.png'
 import SignUpModal from './SignUpModal'
 
 export default function MatchDetails() {
+  const navigate = useNavigate()
   const [showSignUpModal, setShowSignUpModal] = useState(false);
 
   const handleCloseSignUpModal = () => setShowSignUpModal(false);
   const handleShowSignUpModal = () => setShowSignUpModal(true);
+
+  const handleClickMatchHistory = () => {
+    navigate('/match-history')
+  }
 
   return (
     <Container style={{ marginTop: '2rem', marginBottom: '5rem' }}>
@@ -99,7 +104,7 @@ export default function MatchDetails() {
               </div>
             </Col>
             <Col style={{ marginLeft: '1rem', marginBottom: "1.5rem" }}>
-              <div style={{ cursor: "pointer" }} >
+              <div style={{ cursor: "pointer" }}  onClick={handleClickMatchHistory}>
                 <Stack direction='horizontal' gap={0}>
                   <p className='font-bold'>Final Round Match 1</p>
                   <div className='ms-auto' style={{ textAlign: 'right' }}>
@@ -136,7 +141,7 @@ export default function MatchDetails() {
               </div>
             </Col>
             <Col style={{ marginLeft: '1rem', marginBottom: "1.5rem" }}>
-              <div style={{ cursor: "pointer" }} >
+              <div style={{ cursor: "pointer" }} onClick={handleClickMatchHistory}>
                 <Stack direction='horizontal' gap={0}>
                   <p className='font-bold'>Final Round Match 2</p>
                   <div className='ms-auto' style={{ textAlign: 'right' }}>
