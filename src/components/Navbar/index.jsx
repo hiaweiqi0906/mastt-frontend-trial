@@ -29,8 +29,8 @@ export default function MasttNavbar() {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
             <Nav.Link href="/clubs">CLUBS</Nav.Link>
-            <Nav.Link href="/ranks">RANKS</Nav.Link>
-            <Nav.Link href="/matches">MATCHES</Nav.Link>
+            <Nav.Link href="/ranking">RANKS</Nav.Link>
+            <Nav.Link href="/all-matches">MATCHES</Nav.Link>
             <Nav.Link href="/about-us">ABOUT US</Nav.Link>
             <NavDropdown title="Dropdown" id="basic-nav-dropdown">
               <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
